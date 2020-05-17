@@ -2,7 +2,7 @@
 
 tmp_path=$1
 dst_path=$2
-dst_images=$3
+#dst_images=$3
 
 echo $tmp_path
 echo $dst_path
@@ -19,21 +19,24 @@ sleep 1
 sudo find "$tmp_path""/" -delete
 sudo find "$dst_path""/" -delete
 
-#sleep 20
+sleep 1
 
 sleep 3
 mkdir "$tmp_path"
-mkdir "$dst_path"
-mkdir "$dst_path""/images"
+mkdir -p "$dst_path"
+mkdir -p "$dst_path""/images"
+mkdir -p "$dst_path""/_posts"
 
 
-#sleep 10
+sleep 1
 echo temporary directories created
 
 # Destination folder should be empty
 #Cloning github
 
-echo Cloning repository
+echo Cloning repository...
+
+sleep 1
 
 git clone https://github.com/victorhdda/blog.git $tmp_path"/"
 
@@ -46,14 +49,14 @@ sleep 2
 
 #touch oi.txt
 #sleep 2
-find "$tmp_path""/" -type f -name '*.md' | xargs -I '{}' cp {} "$dst_path" #dest_folder
+find "$tmp_path""/" -type f -name '*.md' | xargs -I '{}' cp {} "$dst_path""/_posts" #dest_folder
 
 #copiar imagens cp -R images/* folder/
 
 
 
 sleep 2
-cd "$dst_path"
+cd "$dst_path""/_posts"
 echo cd..
 
 #sleep 1
@@ -78,16 +81,22 @@ sleep 2
 #cp -R -v "$tmp_path"/images/* ""$dst_path" ../images"
 
 echo "$pwd"
-cp -R -v "$tmp_path"/images/* "$dst_images""/"
+cp -R -v "$tmp_path"/images/* "$dst_path""/images"
 
 
 
-sudo chmod 744 -R "$dst_path"*
+sudo chmod 744 -R "$dst_path""/images"
+sudo chmod 744 -R "$dst_path""/_posts"
 
 # Ajustar permissões em todo blog
 
 
 exit
+
+
+#/home/vh/Blog/source
 #/home/vh/Blog/source/_posts
+#/home/vh/Blog/source/images
+
 
 # a pasta é um hiperlink? pq não dá para criar o caminha do nome com _ ?

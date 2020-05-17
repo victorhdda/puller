@@ -39,7 +39,34 @@ find /tmp/aa02/ -type f -name '*.md' | xargs -I '{}' cp {} /tmp/aa02/folder
 https://www.tecmint.com/permanently-and-securely-delete-files-directories-linux/
 
 
+find
+https://stackoverflow.com/questions/22388480/how-to-pipe-the-results-of-find-to-mv-in-linux
+
+
+
+#REGEX - rename
+
+https://www.cyberciti.biz/faq/linux-rename-file/
+
 https://www.rexegg.com/regex-quickstart.html
 
 
 https://serverfault.com/questions/5685/renaming-files-in-linux-with-a-regex
+
+
+
+chmod
+
+https://www.december.com/unix/ref/chmod.html
+https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x9543.htm
+
+
+movi files
+
+https://www.cyberciti.biz/faq/linux-unix-appleosx-bsd-move-directory-uponelevel/
+
+
+TAR
+
+https://www.cyberciti.biz/faq/how-do-i-compress-a-whole-linux-or-unix-directory/
+https://stackoverflow.com/questions/18402395/how-to-uncompress-a-tar-gz-in-another-directory
