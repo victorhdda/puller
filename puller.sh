@@ -89,3 +89,5 @@ sudo chmod 744 -R "$dst_path"*
 
 exit
 #/home/vh/Blog/source/_posts
+
+# a pasta é um hiperlink? pq não dá para criar o caminha do nome com _ ?
