@@ -2,8 +2,8 @@
 
 What I need:
 
-- pull a git project from a static url periodic
-- rename and move specific content to a new local folder
+- pull a git project from a static url periodic: git@github.com:victorhdda/blog.git
+- rename and move specific files to a new local folder: all .md
 - add specific permissions to these files: -rw-r--r--
 
 
