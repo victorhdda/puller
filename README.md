@@ -59,6 +59,9 @@ chmod
 
 https://www.december.com/unix/ref/chmod.html
 https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x9543.htm
+https://help.ubuntu.com/community/FilePermissions
+
+https://unix.stackexchange.com/questions/49263/recursive-mkdir
 
 
 movi files
@@ -70,3 +73,13 @@ TAR
 
 https://www.cyberciti.biz/faq/how-do-i-compress-a-whole-linux-or-unix-directory/
 https://stackoverflow.com/questions/18402395/how-to-uncompress-a-tar-gz-in-another-directory
+
+cron
+https://crontab.guru/
+https://askubuntu.com/questions/13730/how-can-i-schedule-a-nightly-reboot
+
+docker
+
+https://docs.docker.com/engine/reference/commandline/docker/
+
+https://docs.docker.com/engine/reference/commandline/restart/
