@@ -77,9 +77,14 @@ https://stackoverflow.com/questions/18402395/how-to-uncompress-a-tar-gz-in-anoth
 cron
 https://crontab.guru/
 https://askubuntu.com/questions/13730/how-can-i-schedule-a-nightly-reboot
+https://askubuntu.com/questions/56683/where-is-the-cron-crontab-log
 
 docker
 
 https://docs.docker.com/engine/reference/commandline/docker/
 
 https://docs.docker.com/engine/reference/commandline/restart/
+
+bash
+
+https://www.shellhacks.com/tune-command-line-history-bash/
