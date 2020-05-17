@@ -109,4 +109,8 @@ https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x9543.htm>
   - <https://docs.docker.com/engine/reference/commandline/restart/>
 
 - Bash
-  - <https://www.shellhacks.com/tune-command-line-history-bash/>
+  - <https://www.shellhacks.com/tune-command-line-history-bash/>]
+
+- Markdown
+  - <https://www.markdownguide.org/extended-syntax/>
+  - <https://gist.github.com/rxaviers/7360908>
