@@ -73,13 +73,13 @@ sleep 2
 
 #path images: /home/vh/Blog/source/images
 
-cp -R "$tmp_path"/images/* "$dst_path"
+cp -R -v "$tmp_path"/images/* "$dst_path" ../images
 
 
 
 sudo chmod 744 -R "$dst_path"*
 
-
+# Ajustar permissões em todo blog
 
 
 exit
