@@ -85,14 +85,18 @@ cp -R -v "$tmp_path"/images/* "$dst_path""/images"
 
 
 
-sudo chmod 744 -R "$dst_path""/images"
-sudo chmod 744 -R "$dst_path""/_posts"
+sudo chmod 644 -R "$dst_path""/images/"*
+sudo chmod 644 -R "$dst_path""/_posts/"*
 
-# Ajustar permissões em todo blog
+# Ajustar permissões dos arquivos transferidos.
 
 
 exit
 
+
+#comentar código
+
+#Substituir caminhos por variáveis
 
 #/home/vh/Blog/source
 #/home/vh/Blog/source/_posts
