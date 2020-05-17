@@ -35,7 +35,7 @@ echo temporary directories created
 
 echo Cloning repository
 
-git clone git@github.com:victorhdda/blog.git $tmp_path"/"
+git clone https://github.com/victorhdda/blog.git $tmp_path"/"
 
 wait
 
