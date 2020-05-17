@@ -95,8 +95,10 @@ exit
 
 
 #comentar código
-
 #Substituir caminhos por variáveis
+#Remover sleeps
+#Ajustar reboot docker
+#sudo docker restart c19229af94d2
 
 #/home/vh/Blog/source
 #/home/vh/Blog/source/_posts
