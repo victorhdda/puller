@@ -2,6 +2,7 @@
 
 tmp_path=$1
 dst_path=$2
+dst_images=$3
 
 echo $tmp_path
 echo $dst_path
@@ -76,7 +77,8 @@ sleep 2
 
 #cp -R -v "$tmp_path"/images/* ""$dst_path" ../images"
 
-cp -R -v "$tmp_path"/images/* $dst_path ../images
+echo "$pwd"
+cp -R -v "$tmp_path"/images/* "$dst_images""/"
 
 
 
