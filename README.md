@@ -1,16 +1,16 @@
-# Puller - a git pull script to update local blog server
+# Puller - a git pull script to update a blog server
 
 
 ### What is needed:
 
-- Pull a git project from a static url periodically and update a blog content;
-- Rename and move specific files to a new local folder;
-- Add specific permissions to files (`-rwxr--r--`) and folders (`drwxr-xr-x`);
-- Attach the execution of this script to a cron job.
+- Pull a git project from a static url periodically and update a blog content; :white_check_mark:
+- Rename and move specific files to a new local folder; :white_check_mark:
+- Add specific permissions to files (`-rwxr--r--`) and folders (`drwxr-xr-x`); :white_check_mark:
+- Attach the execution of this script to a cron job. :white_check_mark:
 
 ### Solutions:
-- Created a script to process temporary and destination folders; clone remote public github repository; copy and rename contents do desired paths and change permissions.
-- Created a cron job that executes this scripts periodically.
+- It was created a script to process temporary and destination folders; clone remote public github repository; copy and rename contents do desired paths and change permissions.
+- Also was created a cron job that executes this scripts periodically.
 
 
 ### Learned lessons
@@ -33,7 +33,9 @@ find /path/to/folder -delete
 
 The command `rename` could be very useful associated to REGEX expressions. In the command above it is filtered preexistent date pattern in the filename.
 
+```sh
 rename -n 's/(\d{4})-(\d{2})-(\d{2})-//g' *
+```
 
 Execution:
 
@@ -50,9 +52,31 @@ rename(2020-05-16-parallel.md, parallel.md)
 The parameter `-n` shows what will be renamed, if removed, the command execute the change.
 
 
+#### Cron
+
+At the web server was configured a cron job to run the script periodically. The added line to `crontab -e` was:
+
+```
+* */1 * * * /path/to/script/folder/puller.sh /tmp/folder /dst/folder/; sudo docker restart id_of_the_container
+```
+Every hour the task runs automatically.
 
 
+#### Docker
 
+As the web server runs in a Docker container, it is necessary to restart that execution after those folders and files change.
+
+The command `sudo docker restart id_of_the_container` at the cron job do that.
+
+To identify the id of the running container is used the command
+
+```sh
+user@pc:~$ sudo docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+id212132        davyyy/hexo         "/root/entrypoint.sh…"   20 months ago       Up 43 minutes       0.0.0.0:4000->4000/tcp   hexo-server
+```
+
+With all this process the main objective was achieved and now is possible to link a web server to a git repository automatically. :smile:
 
 
 ## References
