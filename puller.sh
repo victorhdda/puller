@@ -23,6 +23,7 @@ sudo find "$dst_path""/" -delete
 sleep 3
 mkdir "$tmp_path"
 mkdir "$dst_path"
+mkdir "$dst_path""/images"
 
 
 #sleep 10
@@ -73,7 +74,9 @@ sleep 2
 
 #path images: /home/vh/Blog/source/images
 
-cp -R -v "$tmp_path"/images/* "$dst_path" ../images
+#cp -R -v "$tmp_path"/images/* ""$dst_path" ../images"
+
+cp -R -v "$tmp_path"/images/* $dst_path ../images
 
 
 
@@ -83,3 +86,4 @@ sudo chmod 744 -R "$dst_path"*
 
 
 exit
+#/home/vh/Blog/source/_posts
